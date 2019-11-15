@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tentcoo.freemarkerdemo.mapper.FreemarkerMapper">
+    <select id="getNameAll" resultType="com.tentcoo.freemarkerdemo.dto.MenuDTO">
+        SELECT
+        m.id,
+        m.name,
+        m.url,
+        m.icon_id as iconId,
+        m.level,
+        m.module,
+        m.weight,
+        m.pid
+        FROM system_menu m
+    </select>
+</mapper>
